@@ -38,8 +38,7 @@
                 <div class="lesson-list" v-if="sortedLessons.length">
                     <article v-for="(lesson, index) in sortedLessons" :key="lesson.id" class="lesson">
                         <div class="lesson-left">
-                            <img :src="`https://adelmar-lessons.herokuapp.com/public/${index+1}.jpeg`" alt="lesson image" class="lesson-img" />
-                            <!-- <img :src="`http://localhost:3000/app/img${index+1}.jpeg`" alt="lesson image" class="lesson-img" /> -->
+                            <img :src="`https://adelmar-lesson.herokuapp.com/public/${index+1}.jpeg`" alt="lesson image" class="lesson-img" />
                             <h1 class="lesson-ttl">{{lesson.topic}}</h1>
                             <button :class="lesson.space === 0 ? 'disabled-purchase-bttn':'purchase-bttn'" @click="purchaseLesson(lesson)">Purchase Lesson</button>
                         </div>
