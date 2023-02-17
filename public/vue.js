@@ -32,6 +32,9 @@ let app = new Vue({
         async confirm() { // post request which allows us to add the information below to our order section of the database 
             await fetch(`${API_URL}/order`, {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify({
                     name: this.name,
                     phone: this.phone,
